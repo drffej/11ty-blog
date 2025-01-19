@@ -1,0 +1,56 @@
+---
+description: ""
+---
+
+<!DOCTYPE html>
+<html lang="en">
+{% include "components/header.njk" %}
+<body>
+
+
+
+<!-- Page content -->
+<div class="w3-main">
+
+
+{{ content | safe }}
+
+<!-- Footer -->
+{% include "components/footer.njk" %}
+<!-- End Page Content -->
+</div>
+<script>
+
+
+function copyCode(button) {
+
+    const codeText = button.parentElement.parentElement.nextElementSibling.innerText
+  
+    // Copy the text to the clipboard
+    navigator.clipboard.writeText(codeText).then(() => {
+    
+    // Change icon to "check" on success
+    const icon = button.querySelector('i');
+    icon.classList.remove('fa-copy');
+    icon.classList.add('fa-check');
+
+    // Show "Copied!" message
+    const copyText = button.previousElementSibling
+    copyText.classList.add('visible');
+
+    // Remove "Copied!" message after 2 seconds and reset icon
+    setTimeout(() => {
+      copyText.classList.remove('visible');
+      icon.classList.remove('fa-check');
+      icon.classList.add('fa-copy');
+    }, 2000);
+
+  }).catch(err => {
+    console.error('Failed to copy code: ', err);
+  });
+}
+
+</script>
+     
+</body>
+</html>

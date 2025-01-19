@@ -1,0 +1,28 @@
+---
+layout: base.njk
+---
+
+<div class="w3-container  w3-padding-16">
+  <div class="w3-border w3-border-sunset-orange w3-round w3-container w3-padding-16">
+
+  <h1>Contact Us</h1>
+
+<form class="w3-container w3-card-4 w3-light-grey" name="contact" action="/thanks" method="POST" data-netlify="true" >
+  <p>
+    Please send us a message by filling out the form below:</p>
+  <p>
+    <label for="name" class="w3-text-gray w3-small">Your Name</label> <input id="name" type="text" class="w3-input w3-border" name="name" />
+  </p>
+  <p>
+    <label class="w3-text-gray w3-small">Your Email</label><input type="email" class="w3-input w3-border" name="email" />
+  </p>
+  <p>
+    <label class="w3-text-gray w3-small">Message</label> <textarea class="w3-input w3-border" name="message" style="resize:none"></textarea>
+  </p>
+  <div data-netlify-recaptcha="true"></div>
+  <p>
+    <button type="submit" class="w3-btn w3-padding w3-theme-sunset-orange" style="width:120px">Send &nbsp; ❯</button>
+  </p>
+</form>
+</div>
+</div>

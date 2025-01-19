@@ -1,0 +1,27 @@
+{
+  "name": "11ty-blog-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+    "build:css": "mkdir -p _site/assets/css/fontawesome && cp -R ./node_modules/@fortawesome/fontawesome-free/css/all.min.css _site/assets/css/fontawesome && cp -R ./node_modules/@fortawesome/fontawesome-free/webfonts _site/assets/css/fontawesome/webfonts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "date-fns": "^4.1.0",
+    "markdown-it": "^14.1.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-img": "^4.0.2"
+  }
+}
